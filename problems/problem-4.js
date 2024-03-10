@@ -37,7 +37,12 @@ const items = [
 ]
 
 // Omit the 'age' element
+const omittedElement = 'age';
 
-const person = items // append your code here
-
+const person = items.reduce((acc, [key, value]) => {
+	if (key !== omittedElement) {
+	  acc[key] = value;
+	}
+	return acc;
+  }, {}); // append your array methods here
 test("Problem 4", person)

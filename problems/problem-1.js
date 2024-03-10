@@ -29,6 +29,11 @@ const people = [
 	{ firstName: 'Marie', lastName: 'Curie', age: 66 }
 ]
 
-const peopleStrings = people // append your array methods here
+function getPeopleString(person) {
+	const fullName = person.firstName + " " + person.lastName
+	return 'Name: ' + fullName + ', Age: ' + person.age;
+}
+
+const peopleStrings = people.map(getPeopleString) // append your array methods here
 
 test("Problem 1", peopleStrings)
